@@ -74,12 +74,37 @@ const skillCategories = [
   },
 ];
 
-const techLogos = [
-  "Amazon Bedrock", "AWS Lambda", "Claude (Anthropic)", "LangChain", "LangGraph",
-  "n8n", "GoHighLevel", "Make.com", "Next.js", "React", "TypeScript", "Python",
-  "Amazon S3", "DynamoDB", "Pinecone", "OpenAI", "Google Gemini", "AWS Step Functions",
-  "PostgreSQL", "Redis", "Docker", "Git", "AdonisJS", "Tailwind CSS", "ElevenLabs",
-  "Vercel", "Google BigQuery", "WebRTC", "AWS SQS", "AWS EC2",
+const techServices = [
+  { name: "Amazon Bedrock", icon: "https://cdn.simpleicons.org/amazonaws/FF9900" },
+  { name: "AWS Lambda", icon: "https://cdn.simpleicons.org/awslambda/FF9900" },
+  { name: "Claude (Anthropic)", icon: "https://cdn.simpleicons.org/anthropic/D97757" },
+  { name: "LangChain", icon: "https://cdn.simpleicons.org/langchain/1C3C3C" },
+  { name: "LangGraph", icon: "https://cdn.simpleicons.org/langchain/00A870" },
+  { name: "n8n", icon: "https://cdn.simpleicons.org/n8n/FF6584" },
+  { name: "GoHighLevel", icon: "https://cdn.simpleicons.org/speedtest/0066FF" },
+  { name: "Make.com", icon: "https://cdn.simpleicons.org/make/6D2080" },
+  { name: "Next.js", icon: "https://cdn.simpleicons.org/nextdotjs/ffffff" },
+  { name: "React", icon: "https://cdn.simpleicons.org/react/61DAFB" },
+  { name: "TypeScript", icon: "https://cdn.simpleicons.org/typescript/3178C6" },
+  { name: "Python", icon: "https://cdn.simpleicons.org/python/3776AB" },
+  { name: "Amazon S3", icon: "https://cdn.simpleicons.org/amazons3/569A31" },
+  { name: "DynamoDB", icon: "https://cdn.simpleicons.org/amazondynamodb/4053D6" },
+  { name: "Pinecone", icon: "https://cdn.simpleicons.org/pinecone/6d28d9" },
+  { name: "OpenAI", icon: "https://cdn.simpleicons.org/openai/10a37f" },
+  { name: "Google Gemini", icon: "https://cdn.simpleicons.org/googlegemini/8E75FF" },
+  { name: "AWS Step Functions", icon: "https://cdn.simpleicons.org/amazonaws/FF9900" },
+  { name: "PostgreSQL", icon: "https://cdn.simpleicons.org/postgresql/4169E1" },
+  { name: "Redis", icon: "https://cdn.simpleicons.org/redis/FF4438" },
+  { name: "Docker", icon: "https://cdn.simpleicons.org/docker/2496ED" },
+  { name: "Git", icon: "https://cdn.simpleicons.org/git/F05032" },
+  { name: "AdonisJS", icon: "https://cdn.simpleicons.org/adonisjs/5A45FF" },
+  { name: "Tailwind CSS", icon: "https://cdn.simpleicons.org/tailwindcss/06B6D4" },
+  { name: "ElevenLabs", icon: "https://cdn.simpleicons.org/elevenlabs/ffffff" },
+  { name: "Vercel", icon: "https://cdn.simpleicons.org/vercel/ffffff" },
+  { name: "Google BigQuery", icon: "https://cdn.simpleicons.org/googlebigquery/669DF6" },
+  { name: "WebRTC", icon: "https://cdn.simpleicons.org/webrtc/333333" },
+  { name: "AWS SQS", icon: "https://cdn.simpleicons.org/amazonaws/FF9900" },
+  { name: "AWS EC2", icon: "https://cdn.simpleicons.org/amazonec2/FF9900" },
 ];
 
 function SkillBar({ name, level }: { name: string; level: number }) {
@@ -152,12 +177,20 @@ export default function Skills() {
 
         <div className="reveal overflow-hidden py-8 border-y border-white/5">
           <div className="flex marquee-track" style={{ width: "max-content" }}>
-            {[...techLogos, ...techLogos].map((tech, i) => (
+            {[...techServices, ...techServices].map((tech, i) => (
               <div
                 key={i}
-                className="flex-shrink-0 mx-6 px-6 py-3 rounded-full border border-white/5 bg-white/[0.02] text-zinc-400 text-sm font-medium cursor-default"
+                className="flex-shrink-0 mx-4 px-5 py-2.5 rounded-full border border-white/10 bg-white/[0.03] text-zinc-300 text-sm font-medium flex items-center gap-3 hover:border-accent/40 transition-all cursor-default shadow-sm"
               >
-                {tech}
+                <img
+                  src={tech.icon}
+                  alt={tech.name}
+                  className="w-5 h-5 object-contain"
+                  onError={(e) => {
+                    (e.target as HTMLElement).style.display = "none";
+                  }}
+                />
+                <span>{tech.name}</span>
               </div>
             ))}
           </div>

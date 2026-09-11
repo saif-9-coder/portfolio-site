@@ -7,69 +7,69 @@ const skillCategories = [
     title: "Cloud (AWS)",
     icon: "☁️",
     skills: [
-      { name: "Amazon Bedrock", level: 95 },
-      { name: "AWS Lambda", level: 92 },
-      { name: "Amazon S3 & S3 Vectors", level: 90 },
-      { name: "API Gateway", level: 88 },
-      { name: "DynamoDB & IAM", level: 86 },
-      { name: "AWS Step Functions & ECS", level: 84 },
-      { name: "Amazon SQS & SNS", level: 82 },
+      { name: "Amazon Bedrock", level: 95, icon: "https://cdn.simpleicons.org/amazonaws/FF9900" },
+      { name: "AWS Lambda", level: 92, icon: "https://cdn.simpleicons.org/awslambda/FF9900" },
+      { name: "Amazon S3 & S3 Vectors", level: 90, icon: "https://cdn.simpleicons.org/amazons3/569A31" },
+      { name: "API Gateway", level: 88, icon: "https://cdn.simpleicons.org/amazonaws/FF9900" },
+      { name: "DynamoDB & IAM", level: 86, icon: "https://cdn.simpleicons.org/amazondynamodb/4053D6" },
+      { name: "AWS Step Functions & ECS", level: 84, icon: "https://cdn.simpleicons.org/amazonec2/FF9900" },
+      { name: "Amazon SQS & SNS", level: 82, icon: "https://cdn.simpleicons.org/amazonaws/FF9900" },
     ],
   },
   {
     title: "Artificial Intelligence & Agents",
     icon: "🧠",
     skills: [
-      { name: "Generative AI & LLMs (Claude, GPT, Gemini)", level: 96 },
-      { name: "LangChain & LangGraph", level: 94 },
-      { name: "RAG & Vector Search (Pinecone, S3 Vectors)", level: 92 },
-      { name: "AI Agents & MCP (Model Context Protocol)", level: 92 },
-      { name: "Prompt Engineering & Evaluation", level: 90 },
-      { name: "ElevenLabs Voice AI & WebRTC", level: 86 },
+      { name: "Generative AI & LLMs (Claude, GPT, Gemini)", level: 96, icon: "https://cdn.simpleicons.org/anthropic/D97757" },
+      { name: "LangChain & LangGraph", level: 94, icon: "https://cdn.simpleicons.org/langchain/1C3C3C" },
+      { name: "RAG & Vector Search (Pinecone, S3 Vectors)", level: 92, icon: "https://cdn.simpleicons.org/pinecone/6d28d9" },
+      { name: "AI Agents & MCP (Model Context Protocol)", level: 92, icon: "https://cdn.simpleicons.org/openai/10a37f" },
+      { name: "Prompt Engineering & Evaluation", level: 90, icon: "https://cdn.simpleicons.org/googlegemini/8E75FF" },
+      { name: "ElevenLabs Voice AI & WebRTC", level: 86, icon: "https://cdn.simpleicons.org/elevenlabs/ffffff" },
     ],
   },
   {
     title: "AI Automation & Workflow Platforms",
     icon: "⚡",
     skills: [
-      { name: "n8n Automation Workflows", level: 95 },
-      { name: "GoHighLevel (GHL) AI Solutions", level: 92 },
-      { name: "Make.com (Integromat)", level: 90 },
-      { name: "REST APIs & Webhooks", level: 92 },
-      { name: "BullMQ & Redis Message Queues", level: 85 },
+      { name: "n8n Automation Workflows", level: 95, icon: "https://cdn.simpleicons.org/n8n/FF6584" },
+      { name: "GoHighLevel (GHL) AI Solutions", level: 92, icon: "https://cdn.simpleicons.org/speedtest/0066FF" },
+      { name: "Make.com (Integromat)", level: 90, icon: "https://cdn.simpleicons.org/make/6D2080" },
+      { name: "REST APIs & Webhooks", level: 92, icon: "https://cdn.simpleicons.org/postman/FF6C37" },
+      { name: "BullMQ & Redis Message Queues", level: 85, icon: "https://cdn.simpleicons.org/redis/FF4438" },
     ],
   },
   {
     title: "Full Stack & Frameworks",
     icon: "💻",
     skills: [
-      { name: "Next.js & React", level: 92 },
-      { name: "TypeScript & JavaScript", level: 90 },
-      { name: "Python", level: 88 },
-      { name: "Node.js & Express / AdonisJS", level: 86 },
-      { name: "Tailwind CSS & Vite", level: 90 },
+      { name: "Next.js & React", level: 92, icon: "https://cdn.simpleicons.org/nextdotjs/ffffff" },
+      { name: "TypeScript & JavaScript", level: 90, icon: "https://cdn.simpleicons.org/typescript/3178C6" },
+      { name: "Python", level: 88, icon: "https://cdn.simpleicons.org/python/3776AB" },
+      { name: "Node.js & Express / AdonisJS", level: 86, icon: "https://cdn.simpleicons.org/nodedotjs/5FA04E" },
+      { name: "Tailwind CSS & Vite", level: 90, icon: "https://cdn.simpleicons.org/tailwindcss/06B6D4" },
     ],
   },
   {
     title: "Databases & Storage",
     icon: "🗄️",
     skills: [
-      { name: "PostgreSQL & Neon DB", level: 88 },
-      { name: "Amazon DynamoDB", level: 85 },
-      { name: "MySQL", level: 82 },
-      { name: "Redis Cache", level: 80 },
-      { name: "Google BigQuery", level: 78 },
+      { name: "PostgreSQL & Neon DB", level: 88, icon: "https://cdn.simpleicons.org/postgresql/4169E1" },
+      { name: "Amazon DynamoDB", level: 85, icon: "https://cdn.simpleicons.org/amazondynamodb/4053D6" },
+      { name: "MySQL", level: 82, icon: "https://cdn.simpleicons.org/mysql/4479A1" },
+      { name: "Redis Cache", level: 80, icon: "https://cdn.simpleicons.org/redis/FF4438" },
+      { name: "Google BigQuery", level: 78, icon: "https://cdn.simpleicons.org/googlebigquery/669DF6" },
     ],
   },
   {
     title: "DevOps, Deployment & Tools",
     icon: "🛠️",
     skills: [
-      { name: "Git & GitHub", level: 92 },
-      { name: "Docker & Containerization", level: 82 },
-      { name: "Linux / Ubuntu Server", level: 85 },
-      { name: "Vercel & AWS Cloud Deployment", level: 88 },
-      { name: "Postman & API Testing", level: 90 },
+      { name: "Git & GitHub", level: 92, icon: "https://cdn.simpleicons.org/git/F05032" },
+      { name: "Docker & Containerization", level: 82, icon: "https://cdn.simpleicons.org/docker/2496ED" },
+      { name: "Linux / Ubuntu Server", level: 85, icon: "https://cdn.simpleicons.org/ubuntu/E95420" },
+      { name: "Vercel & AWS Cloud Deployment", level: 88, icon: "https://cdn.simpleicons.org/vercel/ffffff" },
+      { name: "Postman & API Testing", level: 90, icon: "https://cdn.simpleicons.org/postman/FF6C37" },
     ],
   },
 ];
@@ -107,7 +107,7 @@ const techServices = [
   { name: "AWS EC2", icon: "https://cdn.simpleicons.org/amazonec2/FF9900" },
 ];
 
-function SkillBar({ name, level }: { name: string; level: number }) {
+function SkillBar({ name, level, icon }: { name: string; level: number; icon?: string }) {
   const ref = useRef<HTMLDivElement>(null);
   const filled = useRef(false);
 
@@ -130,8 +130,20 @@ function SkillBar({ name, level }: { name: string; level: number }) {
 
   return (
     <div ref={ref} className="space-y-2">
-      <div className="flex justify-between text-sm">
-        <span className="text-zinc-300 font-medium">{name}</span>
+      <div className="flex justify-between text-sm items-center">
+        <div className="flex items-center gap-2">
+          {icon && (
+            <img
+              src={icon}
+              alt={name}
+              className="w-4 h-4 object-contain"
+              onError={(e) => {
+                (e.target as HTMLElement).style.display = "none";
+              }}
+            />
+          )}
+          <span className="text-zinc-300 font-medium">{name}</span>
+        </div>
         <span className="text-zinc-600 font-mono text-xs">{level}%</span>
       </div>
       <div className="skill-bar">
@@ -168,7 +180,7 @@ export default function Skills() {
               </div>
               <div className="space-y-5">
                 {cat.skills.map((skill) => (
-                  <SkillBar key={skill.name} name={skill.name} level={skill.level} />
+                  <SkillBar key={skill.name} name={skill.name} level={skill.level} icon={skill.icon} />
                 ))}
               </div>
             </div>

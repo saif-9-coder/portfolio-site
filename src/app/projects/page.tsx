@@ -1,34 +1,40 @@
-"use client";
+import { projects } from "@/data/projects";
 
-import { projects } from "../data/projects";
+export const metadata = {
+  title: "All Projects | Saif Ur Rahman",
+  description:
+    "All 21 projects — AI systems, automation solutions and web applications built by Saif Ur Rahman at DevRox.",
+};
 
-const visibleProjects = [
-  ...projects.filter((p) => p.featured),
-  ...projects.filter((p) => !p.featured),
-].slice(0, 8);
-
-export default function Projects() {
+export default function ProjectsPage() {
   return (
-    <section id="projects" className="relative py-32 px-6">
+    <main className="relative py-24 px-6 min-h-screen">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-20">
-          <span className="reveal text-sm font-mono text-accent-light tracking-widest uppercase">
-            My work
+        <a
+          href="/"
+          className="inline-flex items-center gap-2 text-sm text-zinc-400 hover:text-accent-light transition-colors mb-10"
+        >
+          ← Back to Home
+        </a>
+
+        <div className="text-center mb-16">
+          <span className="text-sm font-mono text-accent-light tracking-widest uppercase">
+            Portfolio
           </span>
-          <h2 className="reveal text-4xl sm:text-5xl font-bold mt-4">
-            Featured <span className="gradient-text">Projects</span>
-          </h2>
-          <p className="reveal text-zinc-500 mt-4 max-w-xl mx-auto text-lg">
-            Real products, AI systems and automation solutions built at DevRox
+          <h1 className="text-4xl sm:text-5xl font-bold mt-4">
+            All <span className="gradient-text">Projects</span>
+          </h1>
+          <p className="text-zinc-500 mt-4 max-w-xl mx-auto text-lg">
+            {projects.length} projects — click any project for the full case study
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 stagger">
-          {visibleProjects.map((project) => (
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((project) => (
             <a
               key={project.slug}
               href={`/projects/${project.slug}`}
-              className="reveal card-glow group overflow-hidden flex flex-col"
+              className="card-glow group overflow-hidden flex flex-col"
             >
               <div className="relative h-48 bg-gradient-to-br from-accent/10 to-pink-500/10 flex items-center justify-center overflow-hidden border-b border-white/5">
                 {project.image ? (
@@ -46,7 +52,7 @@ export default function Projects() {
 
               <div className="p-6 flex-1 flex flex-col justify-between">
                 <div>
-                  <h3 className="text-xl font-bold mb-3 leading-snug">
+                  <h3 className="text-xl font-bold mb-3 leading-snug group-hover:text-accent-light transition-colors">
                     {project.title}
                   </h3>
                   <p className="text-zinc-400 text-sm leading-relaxed mb-5">
@@ -67,16 +73,7 @@ export default function Projects() {
             </a>
           ))}
         </div>
-
-        <div className="reveal text-center mt-14">
-          <a
-            href="/projects"
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-accent/20 border border-accent/30 text-accent-light font-semibold text-lg hover:bg-accent/30 transition-all"
-          >
-            See All {projects.length} Projects →
-          </a>
-        </div>
       </div>
-    </section>
+    </main>
   );
 }

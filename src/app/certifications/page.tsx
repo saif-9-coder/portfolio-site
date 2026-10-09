@@ -1,35 +1,104 @@
 "use client";
 
 import { useState } from "react";
-import { certifications, CREDLY_URL } from "../data/certifications";
+import { certifications, CREDLY_URL, type CertificationItem } from "@/data/certifications";
 
-const featuredCerts = certifications.slice(0, 6);
+const categories = [
+  "All",
+  "Professional Badges",
+  "AWS Certifications",
+  "Google Certifications",
+  "Anthropic Certifications",
+  "All Badges",
+  "Certificates",
+];
 
-export default function Certifications() {
+function getFilteredCerts(catName: string): CertificationItem[] {
+  if (catName === "All") return certifications;
+  if (catName === "Professional Badges") {
+    return certifications.filter((c) => c.isProfessional || c.category === "Professional Badges");
+  }
+  if (
+    catName === "AWS Certifications" ||
+    catName === "AWS Certificates" ||
+    catName === "AWS"
+  ) {
+    return certifications.filter(
+      (c) =>
+        c.issuer.includes("AWS") ||
+        c.issuer.includes("Amazon")
+    );
+  }
+  if (
+    catName === "Google Certifications" ||
+    catName === "Google Badges" ||
+    catName === "Google"
+  ) {
+    return certifications.filter((c) => c.issuer.includes("Google"));
+  }
+  if (
+    catName === "Anthropic Certifications" ||
+    catName === "Anthropic"
+  ) {
+    return certifications.filter((c) => c.issuer.includes("Anthropic"));
+  }
+  if (catName === "All Badges") return certifications.filter((c) => c.type === "badge");
+  if (catName === "Certificates") return certifications.filter((c) => c.type === "certificate");
+  return certifications.filter((c) => c.category === catName);
+}
+
+export default function CertificationsPage() {
+  const [filter, setFilter] = useState("All");
   const [selectedImage, setSelectedImage] = useState<{ url: string; title: string } | null>(null);
 
+  const filteredCerts = getFilteredCerts(filter);
+
   return (
-    <section id="certifications" className="relative py-32 px-6">
+    <main className="relative py-24 px-6 min-h-screen">
       {/* Background glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-pink-500/5 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-pink-500/5 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto relative z-10">
+        <a
+          href="/"
+          className="inline-flex items-center gap-2 text-sm text-zinc-400 hover:text-accent-light transition-colors mb-10"
+        >
+          ← Back to Home
+        </a>
+
         {/* Header */}
         <div className="text-center mb-16">
-          <span className="reveal text-sm font-mono text-accent-light tracking-widest uppercase">
+          <span className="text-sm font-mono text-accent-light tracking-widest uppercase">
             Verified Achievements
           </span>
-          <h2 className="reveal text-4xl sm:text-5xl font-bold mt-4">
+          <h1 className="text-4xl sm:text-5xl font-bold mt-4">
             My <span className="gradient-text">Badges & Certifications</span>
-          </h2>
-          <p className="reveal text-zinc-500 mt-4 max-w-xl mx-auto text-lg">
+          </h1>
+          <p className="text-zinc-500 mt-4 max-w-xl mx-auto text-lg">
             {certifications.length} verified badges and full-sized certificate diplomas from AWS, Anthropic, and Google — Generative AI, LLMs, Agentic AI, and Cloud Architecture
           </p>
+
+          {/* Filter Pills */}
+          <div className="flex flex-wrap items-center justify-center gap-2 mt-8">
+            {categories.map((cat) => (
+              <button
+                key={cat}
+                onClick={() => setFilter(cat)}
+                className={`px-5 py-2 rounded-full text-xs font-semibold transition-all ${
+                  filter === cat
+                    ? "bg-accent text-white shadow-lg shadow-accent/25"
+                    : "bg-white/5 border border-white/10 text-zinc-400 hover:text-white hover:border-accent/40"
+                }`}
+              >
+                {cat} ({getFilteredCerts(cat).length})
+              </button>
+            ))}
+          </div>
         </div>
 
         {/* Certifications grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {featuredCerts.map((cert, index) => (
+          {filteredCerts.map((cert, index) => (
             <div
               key={cert.title + index}
               className="card-glow group flex flex-col overflow-hidden relative transition-all duration-300"
@@ -113,18 +182,8 @@ export default function Certifications() {
           ))}
         </div>
 
-        {/* See All button */}
-        <div className="reveal text-center mt-14">
-          <a
-            href="/certifications"
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-accent/20 border border-accent/30 text-accent-light font-semibold text-lg hover:bg-accent/30 transition-all"
-          >
-            See All {certifications.length} Certifications →
-          </a>
-        </div>
-
         {/* Credly CTA Banner */}
-        <div className="reveal text-center mt-16 p-8 rounded-2xl bg-accent/10 border border-accent/20 max-w-3xl mx-auto">
+        <div className="text-center mt-16 p-8 rounded-2xl bg-accent/10 border border-accent/20 max-w-3xl mx-auto">
           <h3 className="text-xl font-bold mb-2">View Verified Credly Transcript</h3>
           <p className="text-zinc-400 text-sm mb-6">
             All AWS and Google badges are officially issued and verified on Credly.
@@ -170,6 +229,6 @@ export default function Certifications() {
           </div>
         </div>
       )}
-    </section>
+    </main>
   );
 }

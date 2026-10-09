@@ -95,13 +95,8 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <a
           href="#home"
-          className="flex items-center gap-2.5 text-xl font-bold tracking-tight select-none"
+          className="text-xl font-bold tracking-tight select-none"
         >
-          <img
-            src="/logo.png"
-            alt="Saif"
-            className="w-8 h-8 rounded-full object-cover border border-accent/40 shadow-sm"
-          />
           <span className="gradient-text">{"<Saif />"}</span>
         </a>
 

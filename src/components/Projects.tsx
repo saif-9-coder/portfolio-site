@@ -2,114 +2,70 @@
 
 const projects = [
   {
-    title: "Enterprise GenAI Due Diligence & Compliance Platform",
+    title: "GAV & Associates",
+    category: "AI / Conversational AI",
     description:
-      "Production-grade serverless AI platform for automated due diligence, compliance analysis, and forensic report generation. Event-driven architecture where Lambda processes requests, enriches regulatory data from DynamoDB and Amazon S3, and invokes Amazon Bedrock for AI analysis — with explainable AI-powered forensic reports, risk scoring, and entity resolution.",
-    tags: ["AWS Bedrock", "Lambda", "DynamoDB", "Amazon S3", "API Gateway"],
-    image: null,
-    live: "#",
+      "A knowledge-aware chatbot combining Claude by Anthropic, LangChain orchestration, retrieval-augmented generation, and Pinecone vector search to deliver grounded answers from a private knowledge base — with citations and permission-aware retrieval.",
+    tags: ["Claude (Anthropic)", "LangChain", "RAG", "Pinecone", "Python"],
+    image: "/projects/gav-associates.webp",
+    live: "https://thedevrox.com",
     github: "#",
     featured: true,
-    emoji: "🏦",
   },
   {
-    title: "Claude RAG Chatbot",
+    title: "FrontDesk AI",
+    category: "AI / SaaS / Multi-Tenant",
     description:
-      "Claude-powered RAG chatbot for knowledge-grounded conversational AI. Integrated LangChain and Pinecone for semantic document retrieval and built a conversational AI pipeline that retrieves relevant knowledge and provides accurate, context-aware answers using Claude.",
-    tags: ["Next.js", "Claude (Anthropic)", "LangChain", "Pinecone", "RAG"],
-    image: null,
-    live: "#",
+      "A multi-tenant SaaS that lets any business configure an AI agent, feed it knowledge, and embed a chat + voice-call widget on their website — capturing leads, transcripts and bookings in one dashboard. Real-time voice via Twilio and ElevenLabs.",
+    tags: ["Next.js", "React", "TypeScript", "Twilio", "ElevenLabs", "OpenAI"],
+    image: "/projects/frontdesk-ai.webp",
+    live: "https://thedevrox.com",
     github: "#",
     featured: true,
-    emoji: "💬",
   },
   {
-    title: "AI-Powered Document Intelligence & RAG Platform",
+    title: "NexusOps",
+    category: "AI / Automation / Multi-Agent",
     description:
-      "Scalable document intelligence pipeline processing 10,000+ pages of PDFs, scanned documents, and unstructured files using Amazon S3 and Textract OCR. End-to-end RAG workflow with classification, intelligent chunking, S3 Vectors, semantic search, and evidence-based retrieval — plus Bedrock-powered Q&A, summarization, cross-document reasoning, and report generation with source-level traceability.",
-    tags: ["AWS S3", "Textract", "Bedrock", "S3 Vectors", "PostgreSQL", "SQS", "AdonisJS", "Next.js"],
-    image: null,
-    live: "#",
+      "An enterprise agentic AI platform orchestrating autonomous support, sales, escalation, and operations workflows — with human-in-the-loop governance, multi-agent execution, and live operations monitoring built in.",
+    tags: ["Anthropic Claude", "React", "Next.js", "TypeScript", "Multi-Agent"],
+    image: "/projects/nexusops.webp",
+    live: "https://thedevrox.com",
     github: "#",
     featured: true,
-    emoji: "📄",
   },
   {
-    title: "PostPilot — AI Social Media Content & Publishing Platform",
+    title: "RecruitFlow",
+    category: "Web Application",
     description:
-      "AI-powered social media platform that transforms YouTube videos, trending topics, prompts, and uploaded content into platform-specific posts. Integrated Claude, GPT, Gemini, and Llama with automated content generation, media creation, scheduling, and publishing — plus a centralized dashboard for seven social platforms, human approvals, calendars, and cross-platform analytics.",
-    tags: ["Next.js", "React", "TypeScript", "Claude", "OpenAI", "Gemini", "Llama"],
-    image: null,
-    live: "#",
+      "An internal recruitment frontend with separate admin and candidate workspaces — job posting, applicant review, interview scheduling and application tracking in one interface.",
+    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Formik"],
+    image: "/projects/recruitflow.webp",
+    live: "https://thedevrox.com",
     github: "#",
     featured: true,
-    emoji: "🚀",
   },
   {
-    title: "AI-Powered Predictive Pump Monitoring",
+    title: "CyberThreat Mesh",
+    category: "Cybersecurity / AI / SaaS",
     description:
-      "AI-powered industrial monitoring workflow that processes pump sensor data and automatically detects abnormal machine conditions. Implemented automated warning and critical alert workflows with conditional routing, validation, error handling, and email notifications.",
-    tags: ["n8n", "OpenAI", "Webhooks", "JSON", "Gmail"],
-    image: null,
-    live: "#",
+      "A 20-screen interactive security operations platform for visualizing cloud attack surfaces, threat paths, vulnerabilities, governance, and blast-radius analytics — with AI-assisted threat analysis.",
+    tags: ["Next.js", "React", "TypeScript", "Tailwind CSS", "AI"],
+    image: "/projects/cyberthreat.webp",
+    live: "https://thedevrox.com",
     github: "#",
-    featured: false,
-    emoji: "🏭",
+    featured: true,
   },
   {
-    title: "OmniChat — Conversational AI Assistant",
+    title: "Perigee",
+    category: "Aerospace / Mission Operations / SaaS",
     description:
-      "Modern conversational AI assistant with real-time streaming, multi-chat conversations, and persistent conversation history. Modular, responsive full-stack AI application with centralized state management and an architecture ready for RAG, tool use, and agentic AI workflows.",
-    tags: ["Next.js", "React", "TypeScript", "Google Gemini"],
-    image: null,
-    live: "#",
+      "A mission operations workspace unifying spacecraft lifecycle, regulatory filings, ground-pass scheduling, flight hardware inventory, and engineering crew operations in one platform.",
+    tags: ["React", "TypeScript", "Vite", "Tailwind CSS"],
+    image: "/projects/perigee.webp",
+    live: "https://thedevrox.com",
     github: "#",
-    featured: false,
-    emoji: "🗨️",
-  },
-  {
-    title: "MMHC — AI Clinical Note Compliance Platform",
-    description:
-      "Enterprise AI platform for automated clinical note auditing and healthcare compliance validation. Asynchronous processing with BullMQ and Redis, Amazon Bedrock integration via Model Context Protocol (MCP), clinical note versioning with secure JSON storage on S3, and integrations with MySQL, Google BigQuery, and external EHR systems.",
-    tags: ["AWS Bedrock", "Amazon S3", "AdonisJS", "React", "BullMQ", "Redis", "BigQuery"],
-    image: null,
-    live: "#",
-    github: "#",
-    featured: false,
-    emoji: "🏥",
-  },
-  {
-    title: "Live Avatar AI Assistant",
-    description:
-      "AI-powered avatar platform with real-time voice conversations. Integrated LLMs with ElevenLabs for speech synthesis and implemented low-latency WebRTC streaming for interactive AI experiences.",
-    tags: ["Next.js", "Amazon Bedrock", "ElevenLabs", "WebRTC"],
-    image: null,
-    live: "#",
-    github: "#",
-    featured: false,
-    emoji: "🎭",
-  },
-  {
-    title: "Serverless Cloud Applications",
-    description:
-      "Designed and deployed serverless backends using AWS managed services. Built secure REST APIs with Lambda and API Gateway and implemented secure object storage using Amazon S3 and IAM.",
-    tags: ["AWS Lambda", "API Gateway", "Amazon S3", "IAM"],
-    image: null,
-    live: "#",
-    github: "#",
-    featured: false,
-    emoji: "☁️",
-  },
-  {
-    title: "Four AI — Voice & Image Generation Platform",
-    description:
-      "Production-ready full-stack AI platform for text-to-speech, AI image generation, and real-time voice transformation. Secure auth and user management, Hugging Face FLUX.1 image generation, multilingual TTS via the Web Speech API, an admin dashboard, and RESTful serverless APIs on Vercel Functions with Neon PostgreSQL.",
-    tags: ["React", "Vite", "Vercel", "Neon PostgreSQL", "Hugging Face"],
-    image: null,
-    live: "#",
-    github: "#",
-    featured: false,
-    emoji: "🎨",
+    featured: true,
   },
 ];
 
@@ -125,7 +81,7 @@ export default function Projects() {
             Featured <span className="gradient-text">Projects</span>
           </h2>
           <p className="reveal text-zinc-500 mt-4 max-w-xl mx-auto text-lg">
-            Enterprise AI systems, RAG pipelines, and cloud-native applications I&apos;ve built
+            Real products, AI systems and automation solutions built at DevRox
           </p>
         </div>
 
@@ -139,11 +95,10 @@ export default function Projects() {
                     alt={project.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                ) : (
-                  <div className="text-6xl group-hover:scale-110 transition-transform duration-500 select-none">
-                    {project.emoji}
-                  </div>
-                )}
+                ) : null}
+                <div className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur text-[11px] font-medium text-zinc-300 border border-white/10">
+                  {project.category}
+                </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent pointer-events-none" />
               </div>
 

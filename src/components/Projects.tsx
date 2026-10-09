@@ -221,6 +221,17 @@ const projects = [
     github: "#",
     featured: false,
   },
+  {
+    title: "SCRT OVN",
+    category: "E-commerce / Food & Beverage",
+    description:
+      "A WordPress + WooCommerce e-commerce site for an Islamabad-based online bakery — custom cakes, sourdough breads, pastries and desserts with nationwide delivery across Pakistan, WhatsApp ordering, and order tracking.",
+    tags: ["WordPress", "WooCommerce", "E-commerce", "WhatsApp Commerce"],
+    image: "/projects/scrtovn.png",
+    live: "https://scrtovn.com",
+    github: "#",
+    featured: false,
+  },
 ];
 
 export default function Projects() {

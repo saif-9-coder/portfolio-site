@@ -98,7 +98,7 @@ export default function Navbar() {
           className="flex items-center gap-2.5 text-xl font-bold tracking-tight select-none"
         >
           <img
-            src="/my-image.png"
+            src="/logo.png"
             alt="Saif"
             className="w-8 h-8 rounded-full object-cover border border-accent/40 shadow-sm"
           />

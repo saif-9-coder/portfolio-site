@@ -69,10 +69,10 @@ export default function About() {
                 />
               </div>
               <div className="absolute -top-4 -right-4 px-4 py-2 rounded-xl bg-purple-100 dark:bg-accent/20 border border-purple-300 dark:border-accent/30 text-purple-900 dark:text-accent-light text-sm font-semibold backdrop-blur-md shadow-md">
-                🏆 AWS Certified GenAI Developer
+                AWS Certified GenAI Developer
               </div>
               <div className="absolute -bottom-4 -left-4 px-4 py-2 rounded-xl bg-pink-100 dark:bg-pink-500/20 border border-pink-300 dark:border-pink-500/30 text-pink-900 dark:text-pink-300 text-sm font-semibold backdrop-blur-md shadow-md">
-                🤖 Building AI Agents
+                Building AI Agents
               </div>
             </div>
           </div>
@@ -105,7 +105,7 @@ export default function About() {
             <p className="text-zinc-400 leading-relaxed text-lg">
               When I&apos;m not building AI systems, you&apos;ll find me exploring
               new AI technologies, writing technical blogs on Dev.to, earning
-              cloud certifications, or playing cricket with friends 🏏
+              cloud certifications, or playing cricket with friends.
             </p>
 
             <div className="grid grid-cols-2 gap-4 pt-4">

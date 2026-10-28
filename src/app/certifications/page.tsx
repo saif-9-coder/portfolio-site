@@ -9,6 +9,7 @@ const categories = [
   "AWS Certifications",
   "Google Certifications",
   "Anthropic Certifications",
+  "OpenAI Certifications",
   "All Badges",
   "Certificates",
 ];
@@ -41,6 +42,12 @@ function getFilteredCerts(catName: string): CertificationItem[] {
     catName === "Anthropic"
   ) {
     return certifications.filter((c) => c.issuer.includes("Anthropic"));
+  }
+  if (
+    catName === "OpenAI Certifications" ||
+    catName === "OpenAI"
+  ) {
+    return certifications.filter((c) => c.issuer.includes("OpenAI"));
   }
   if (catName === "All Badges") return certifications.filter((c) => c.type === "badge");
   if (catName === "Certificates") return certifications.filter((c) => c.type === "certificate");
@@ -75,7 +82,7 @@ export default function CertificationsPage() {
             My <span className="gradient-text">Badges & Certifications</span>
           </h1>
           <p className="text-zinc-500 mt-4 max-w-xl mx-auto text-lg">
-            {certifications.length} verified badges and full-sized certificate diplomas from AWS, Anthropic, and Google — Generative AI, LLMs, Agentic AI, and Cloud Architecture
+            {certifications.length} verified badges and full-sized certificate diplomas from AWS, Anthropic, Google, and OpenAI — Generative AI, LLMs, Agentic AI, and Cloud Architecture
           </p>
 
           {/* Filter Pills */}

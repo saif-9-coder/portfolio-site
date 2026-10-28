@@ -23,7 +23,7 @@ export default function Certifications() {
             My <span className="gradient-text">Badges & Certifications</span>
           </h2>
           <p className="reveal text-zinc-500 mt-4 max-w-xl mx-auto text-lg">
-            {certifications.length} verified badges and full-sized certificate diplomas from AWS, Anthropic, and Google — Generative AI, LLMs, Agentic AI, and Cloud Architecture
+            {certifications.length} verified badges and full-sized certificate diplomas from AWS, Anthropic, Google, and OpenAI — Generative AI, LLMs, Agentic AI, and Cloud Architecture
           </p>
         </div>
 

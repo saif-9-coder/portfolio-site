@@ -19,7 +19,7 @@ export const CREDLY_URL = "https://www.credly.com/users/saif-ur-rahman-genrative
 
 export const certifications: CertificationItem[] = [
   // ─────────────────────────────────────────────────────────────
-  // ─── PART 1: ALL BADGES FIRST (POSITIONS 1 TO 16) ───
+  // ─── PART 1: ALL BADGES FIRST (POSITIONS 1 TO 23) ───
   // ─────────────────────────────────────────────────────────────
 
   // ── 1.1 PROFESSIONAL BADGES ──
@@ -209,8 +209,87 @@ export const certifications: CertificationItem[] = [
     type: "badge",
   },
 
+  // ── 1.4 OPENAI PARTNER NETWORK BADGES ──
+  {
+    title: "Codex Deployment Practitioner",
+    issuer: "OpenAI Partner Network",
+    icon: "🚀",
+    badgeImage: "/badges/Codex Deployment Practitioner.png",
+    credential: "https://www.credential.net/55d5ba4b-72fa-4cdf-9eba-098d061955ec",
+    color: "from-teal-500/20 to-emerald-500/20",
+    skills: ["Deployment Governance", "Workflow Integration", "Risk Management"],
+    category: "OpenAI Certifications",
+    type: "badge",
+  },
+  {
+    title: "OpenAI Cyber Deployment Practitioner",
+    issuer: "OpenAI Partner Network",
+    icon: "🛡️",
+    badgeImage: "/badges/OpenAI Cyber Deployment Practitioner.png",
+    credential: "https://www.credential.net/8d96b19e-ace5-41c6-bcd2-35eae04a84cd",
+    color: "from-cyan-500/20 to-teal-500/20",
+    skills: ["Security Workflows", "Evidence Analysis", "Security Governance"],
+    category: "OpenAI Certifications",
+    type: "badge",
+  },
+  {
+    title: "Codex Solutions Practitioner",
+    issuer: "OpenAI Partner Network",
+    icon: "💡",
+    badgeImage: "/badges/Codex Solutions Practitioner.png",
+    credential: "https://www.credential.net/01af3766-18fe-42ba-a324-521f0af79b8c",
+    color: "from-emerald-500/20 to-cyan-500/20",
+    skills: ["SDLC Analysis", "Codex Positioning", "Evaluation Planning"],
+    category: "OpenAI Certifications",
+    type: "badge",
+  },
+  {
+    title: "OpenAI Consultative Solutions Practitioner",
+    issuer: "OpenAI Partner Network",
+    icon: "🤝",
+    badgeImage: "/badges/OpenAI Consultative Solutions Practitioner.png",
+    credential: "https://www.credential.net/eb9aa59c-746c-40bd-aede-d7b54644c2a4",
+    color: "from-green-500/20 to-teal-500/20",
+    skills: ["Opportunity Qualification", "Use-case Design", "Solution Mapping"],
+    category: "OpenAI Certifications",
+    type: "badge",
+  },
+  {
+    title: "OpenAI Technical Practitioner",
+    issuer: "OpenAI Partner Network",
+    icon: "⚙️",
+    badgeImage: "/badges/OpenAI Technical Practitioner.png",
+    credential: "https://www.credential.net/f661daf0-6777-479c-ac1a-044739c71e2d",
+    color: "from-teal-500/20 to-sky-500/20",
+    skills: ["Solution Architecture", "Model Selection", "API Integration"],
+    category: "OpenAI Certifications",
+    type: "badge",
+  },
+  {
+    title: "ChatGPT Solutions Practitioner",
+    issuer: "OpenAI Partner Network",
+    icon: "💬",
+    badgeImage: "/badges/ChatGPT Solutions Practitioner.png",
+    credential: "https://www.credential.net/3fa9cf62-9063-41a8-9ed1-fcef8a8e512f",
+    color: "from-emerald-500/20 to-green-500/20",
+    skills: ["Workflow Design", "Solution Positioning", "Trust Building"],
+    category: "OpenAI Certifications",
+    type: "badge",
+  },
+  {
+    title: "ChatGPT Deployment Practitioner",
+    issuer: "OpenAI Partner Network",
+    icon: "📦",
+    badgeImage: "/badges/ChatGPT Deployment Practitioner.png",
+    credential: "https://www.credential.net/faeb3af8-8204-40a7-b3e6-94c5e7b301fd",
+    color: "from-cyan-500/20 to-emerald-500/20",
+    skills: ["Deployment Planning", "Workspace Governance", "Adoption Measurement"],
+    category: "OpenAI Certifications",
+    type: "badge",
+  },
+
   // ─────────────────────────────────────────────────────────────
-  // ─── PART 2: ALL CERTIFICATES SECOND (POSITIONS 17 TO 38) ───
+  // ─── PART 2: ALL CERTIFICATES SECOND (POSITIONS 24 TO 45) ───
   // ─────────────────────────────────────────────────────────────
 
   // ── 2.1 ANTHROPIC SKILLJAR CERTIFICATIONS ──
